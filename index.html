@@ -1,0 +1,1955 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cris Media Studio | Fotograf & Videograf Nuntă Drobeta-Turnu Severin</title>
+  <link rel="icon" type="image/jpeg" href="img/logo-cris-media.jpg" />
+
+  <!-- SEO -->
+  <meta name="description" content="Cris Media Studio – producții cinematice premium pentru nunți și evenimente elegante în Drobeta-Turnu Severin. Fotograf nuntă Severin, videograf nuntă Drobeta. Sună acum: 0740 514 961." />
+  <meta name="keywords" content="fotograf nuntă Severin, videograf nuntă Drobeta, Cris Media Studio, filmare nuntă Drobeta-Turnu Severin, fotografie nuntă Mehedinți" />
+  <meta name="author" content="Cris Media Studio" />
+  <meta property="og:title" content="Cris Media Studio | Filmare & Fotografie Nuntă Premium" />
+  <meta property="og:description" content="Producții cinematice premium pentru evenimentele tale elegante. Drobeta-Turnu Severin." />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============ RESET & BASE ============ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E8C97E;
+      --gold-dark: #9A7A30;
+      --black: #0A0A0A;
+      --black-soft: #111111;
+      --black-card: #161616;
+      --white: #FFFFFF;
+      --white-soft: #F5F0E8;
+      --gray: #888888;
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Montserrat', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    /* ============ SCROLLBAR ============ */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ============ UTILITY ============ */
+    .gold { color: var(--gold); }
+    .section-label {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 24px;
+    }
+    .section-subtitle {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--gray);
+      line-height: 1.8;
+      max-width: 600px;
+    }
+    .gold-line {
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      margin: 20px 0;
+    }
+
+    /* ============ NAVBAR ============ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.4s ease;
+    }
+    nav.scrolled {
+      background: rgba(10,10,10,0.95);
+      backdrop-filter: blur(10px);
+      padding: 14px 40px;
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .nav-logo span { color: var(--gold); }
+    .nav-logo img { height: 42px; width: auto; display: block; }
+    .nav-links {
+      display: flex;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      transition: color 0.3s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 10px 24px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: var(--font-sans);
+    }
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 1px;
+      background: var(--white);
+      transition: all 0.3s;
+    }
+
+    /* ============ HERO ============ */
+    #hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero-video-bg {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0A0A0A 0%, #1a1208 40%, #0A0A0A 100%);
+      z-index: 0;
+    }
+    /* Cinematic overlay pattern */
+    .hero-video-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 50%, rgba(201,168,76,0.08) 0%, transparent 60%),
+        radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.05) 0%, transparent 50%);
+    }
+    .hero-video-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h60v60H0z' fill='none'/%3E%3Ccircle cx='30' cy='30' r='0.5' fill='rgba(201,168,76,0.15)'/%3E%3C/svg%3E");
+      opacity: 0.4;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.8) 100%);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      padding: 0 24px;
+      animation: heroFadeIn 1.4s ease forwards;
+    }
+    @keyframes heroFadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .hero-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid rgba(201,168,76,0.4);
+      padding: 8px 20px;
+      margin-bottom: 32px;
+      animation: heroFadeIn 1.4s 0.2s ease both;
+    }
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 7vw, 80px);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 24px;
+      animation: heroFadeIn 1.4s 0.4s ease both;
+    }
+    .hero-title em {
+      font-style: italic;
+      color: var(--gold);
+    }
+    .hero-subtitle {
+      font-size: clamp(14px, 2vw, 18px);
+      font-weight: 300;
+      color: rgba(255,255,255,0.75);
+      letter-spacing: 1px;
+      margin-bottom: 48px;
+      animation: heroFadeIn 1.4s 0.6s ease both;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      animation: heroFadeIn 1.4s 0.8s ease both;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--black);
+      padding: 18px 40px;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(201,168,76,0.3);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      padding: 18px 40px;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.4);
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-block;
+    }
+    .btn-secondary:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    .hero-phone {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      animation: heroFadeIn 1.4s 1s ease both;
+    }
+    .hero-phone a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      color: rgba(255,255,255,0.6);
+      transition: color 0.3s;
+    }
+    .hero-phone a:hover { color: var(--gold); }
+    .hero-phone a::before { content: '✦ '; color: var(--gold); }
+    .scroll-indicator {
+      position: absolute;
+      bottom: 80px;
+      right: 40px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      opacity: 0.5;
+    }
+    .scroll-indicator span {
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      writing-mode: vertical-rl;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+      animation: scrollPulse 2s ease infinite;
+    }
+    @keyframes scrollPulse {
+      0%, 100% { opacity: 0.5; transform: scaleY(1); }
+      50% { opacity: 1; transform: scaleY(1.1); }
+    }
+
+    /* ============ SECTIONS COMMON ============ */
+    section { padding: 100px 40px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* ============ DESPRE NOI ============ */
+    #despre {
+      background: var(--black-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    #despre::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .despre-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .despre-visual { position: relative; }
+    .despre-tagline {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      font-style: italic;
+      color: var(--gold);
+      letter-spacing: 0.5px;
+      margin: 28px 0;
+      padding: 20px 0;
+      border-top: 1px solid rgba(201,168,76,0.15);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+    }
+    .despre-closing {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-style: italic;
+      color: var(--white);
+      margin-top: 28px !important;
+    }
+    .despre-visual {
+      position: relative;
+    }
+    .despre-image-frame {
+      width: 100%;
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, #1a1208, #0d0d0d);
+      border: 1px solid rgba(201,168,76,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    .despre-image-frame::before {
+      content: '';
+      position: absolute;
+      inset: 20px;
+      border: 1px solid rgba(201,168,76,0.1);
+    }
+    .despre-image-frame::after {
+      content: '✦';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 80px;
+      color: rgba(201,168,76,0.1);
+    }
+    .despre-stats {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--gold);
+      padding: 28px 32px;
+    }
+    .despre-stats .number {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1;
+    }
+    .despre-stats .label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--black);
+      opacity: 0.7;
+    }
+    .despre-text p {
+      font-size: 16px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .despre-features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 36px;
+    }
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .feature-icon {
+      color: var(--gold);
+      font-size: 18px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .feature-item h4 {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+    .feature-item p {
+      font-size: 12px;
+      color: var(--gray);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ============ SERVICII ============ */
+    #servicii {
+      background: var(--black);
+      text-align: center;
+    }
+    .servicii-header { margin-bottom: 64px; }
+    .servicii-header .gold-line { margin: 20px auto; }
+    .servicii-header .section-subtitle { margin: 0 auto; }
+    .servicii-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2px;
+    }
+    .serviciu-card {
+      background: var(--black-card);
+      padding: 48px 36px;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    .serviciu-card::before {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 100%; height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
+    }
+    .serviciu-card:hover {
+      background: #1a1208;
+      transform: translateY(-4px);
+    }
+    .serviciu-card:hover::before { transform: scaleX(1); }
+    .serviciu-icon {
+      font-size: 36px;
+      margin-bottom: 24px;
+      display: block;
+    }
+    .serviciu-card h3 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .serviciu-card p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--gray);
+      line-height: 1.8;
+    }
+    .serviciu-number {
+      position: absolute;
+      top: 20px; right: 24px;
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 700;
+      color: rgba(201,168,76,0.06);
+      line-height: 1;
+    }
+
+    /* ============ PACHETE (SERVICII) ============ */
+    .pachete-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+    .tab-btn {
+      background: transparent;
+      border: 1px solid rgba(201,168,76,0.3);
+      color: var(--gray);
+      padding: 12px 28px;
+      font-family: var(--font-sans);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201,168,76,0.06);
+    }
+    .pachete-panel { display: none; }
+    .pachete-panel.active { display: block; }
+    .pachete-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      text-align: left;
+      margin-bottom: 32px;
+    }
+    .pachet-card {
+      background: var(--black-card);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 40px 32px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s;
+    }
+    .pachet-card:hover {
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-4px);
+    }
+    .pachet-card.featured {
+      border-color: var(--gold);
+      background: #1a1208;
+    }
+    .pachet-badge {
+      position: absolute;
+      top: -1px; right: 24px;
+      background: var(--gold);
+      color: var(--black);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 16px;
+    }
+    .pachet-tier {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+    .pachet-card h3 {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .pachet-price {
+      font-size: 15px;
+      color: var(--gray);
+      margin-bottom: 16px;
+    }
+    .pachet-price span {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+    }
+    .pachet-desc {
+      font-size: 13px;
+      font-weight: 300;
+      color: var(--gray);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .pachet-features {
+      list-style: none;
+      margin-bottom: 32px;
+      flex-grow: 1;
+    }
+    .pachet-features li {
+      font-size: 13px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.8);
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+    }
+    .pachet-features li:last-child { border-bottom: none; }
+    .pachet-card .btn-secondary {
+      width: 100%;
+      text-align: center;
+      padding: 14px 20px;
+    }
+    .pachet-note {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--gray);
+      text-align: center;
+      margin-top: -8px;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+    .servicii-extra {
+      text-align: left;
+      background: var(--black-card);
+      border: 1px solid rgba(201,168,76,0.1);
+      padding: 48px 40px;
+      margin-top: 40px;
+    }
+    .servicii-extra h3 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-align: center;
+    }
+    .servicii-extra > p {
+      text-align: center;
+      color: var(--gray);
+      font-size: 14px;
+      font-weight: 300;
+      margin-bottom: 32px;
+    }
+    .extra-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4px 40px;
+    }
+    .extra-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 14px;
+      font-weight: 300;
+    }
+    .extra-item strong {
+      color: var(--gold);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* ============ PORTOFOLIU ============ */
+    #portofoliu {
+      background: var(--black-soft);
+      text-align: center;
+    }
+    .portofoliu-header { margin-bottom: 56px; }
+    .portofoliu-header .gold-line { margin: 20px auto; }
+    .portofoliu-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 280px 280px;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+    .porto-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    .porto-item:first-child {
+      grid-row: span 2;
+    }
+    .porto-item:nth-child(4) {
+      grid-column: span 2;
+    }
+    .porto-bg {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.6s ease;
+    }
+    img.porto-bg {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .porto-icon {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: clamp(40px, 6vw, 70px);
+      color: rgba(201,168,76,0.15);
+      transition: all 0.4s;
+      pointer-events: none;
+    }
+    .porto-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+    .porto-item:hover .porto-overlay { opacity: 1; }
+    .porto-item:hover img.porto-bg { transform: scale(1.05); }
+    .porto-item:hover .porto-icon { color: rgba(201,168,76,0.05); }
+    .porto-overlay h3 {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .porto-overlay span {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+    .porto-overlay .view-btn {
+      margin-top: 20px;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 10px 24px;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+    .porto-overlay .view-btn:hover {
+      background: var(--gold);
+      color: var(--black);
+    }
+    /* Video highlight */
+    .video-highlight {
+      margin-top: 60px;
+      position: relative;
+      background: var(--black-card);
+      border: 1px solid rgba(201,168,76,0.15);
+      padding: 60px 40px;
+      text-align: center;
+    }
+    .video-highlight h3 {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+    .video-highlight p {
+      font-size: 14px;
+      color: var(--gray);
+      margin-bottom: 32px;
+    }
+    .video-placeholder {
+      width: 100%;
+      max-width: 800px;
+      margin: 0 auto;
+      aspect-ratio: 16/9;
+      background: linear-gradient(135deg, #1a1208, #0d0d0d);
+      border: 1px solid rgba(201,168,76,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+    }
+    .play-btn {
+      width: 80px; height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--gold);
+      transition: all 0.3s;
+    }
+    .video-placeholder:hover .play-btn {
+      background: var(--gold);
+      color: var(--black);
+      transform: scale(1.1);
+    }
+    .video-label {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.3);
+    }
+
+    /* ============ TESTIMONIALE ============ */
+    #testimoniale {
+      background: var(--black);
+      text-align: center;
+    }
+    .testimoniale-header { margin-bottom: 64px; }
+    .testimoniale-header .gold-line { margin: 20px auto; }
+    .testimoniale-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: var(--black-card);
+      border: 1px solid rgba(201,168,76,0.1);
+      padding: 44px 36px;
+      text-align: left;
+      position: relative;
+      transition: border-color 0.3s, transform 0.3s;
+    }
+    .testimonial-card:hover {
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-4px);
+    }
+    .testimonial-card::before {
+      content: '"';
+      position: absolute;
+      top: 20px; left: 28px;
+      font-family: var(--font-serif);
+      font-size: 80px;
+      color: var(--gold);
+      opacity: 0.2;
+      line-height: 1;
+    }
+    .stars {
+      color: var(--gold);
+      font-size: 14px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+    .testimonial-card p {
+      font-size: 15px;
+      font-weight: 300;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.9;
+      font-style: italic;
+      margin-bottom: 28px;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .author-avatar {
+      width: 46px; height: 46px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--black);
+      flex-shrink: 0;
+    }
+    .author-info h4 {
+      font-size: 14px;
+      font-weight: 600;
+    }
+    .author-info span {
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 1px;
+    }
+
+    /* ============ CONTACT ============ */
+    #contact {
+      background: var(--black-soft);
+      position: relative;
+      overflow: hidden;
+    }
+    #contact::after {
+      content: '';
+      position: absolute;
+      bottom: 0; right: 0;
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 80px;
+      align-items: start;
+    }
+    .contact-info h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .contact-info p {
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--gray);
+      line-height: 1.8;
+      margin-bottom: 40px;
+    }
+    .contact-detail {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    .contact-detail-icon {
+      width: 44px; height: 44px;
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .contact-detail-text h4 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+    .contact-detail-text a,
+    .contact-detail-text p {
+      font-size: 15px;
+      color: var(--white);
+      font-weight: 300;
+      margin: 0;
+    }
+    .contact-detail-text a:hover { color: var(--gold); }
+    /* Form */
+    .contact-form {
+      background: var(--black-card);
+      border: 1px solid rgba(201,168,76,0.1);
+      padding: 48px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: var(--white);
+      padding: 14px 16px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 300;
+      outline: none;
+      transition: border-color 0.3s;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      background: rgba(201,168,76,0.03);
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+    .form-group textarea { resize: vertical; min-height: 120px; }
+    .btn-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--black);
+      border: none;
+      padding: 20px;
+      font-family: var(--font-sans);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      margin-top: 8px;
+    }
+    .btn-submit:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 40px rgba(201,168,76,0.25);
+    }
+
+    /* ============ FOOTER ============ */
+    footer {
+      background: var(--black);
+      border-top: 1px solid rgba(201,168,76,0.15);
+      padding: 60px 40px 40px;
+    }
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 48px;
+    }
+    .footer-brand .nav-logo {
+      font-size: 26px;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .footer-brand p {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--gray);
+      line-height: 1.8;
+      max-width: 300px;
+      margin-bottom: 24px;
+    }
+    .social-links {
+      display: flex;
+      gap: 12px;
+    }
+    .social-link {
+      width: 40px; height: 40px;
+      border: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      color: var(--gray);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+    .social-link:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      background: rgba(201,168,76,0.05);
+    }
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .footer-col ul li a {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--gray);
+      transition: color 0.3s;
+    }
+    .footer-col ul li a:hover { color: var(--gold); }
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-bottom p {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+    }
+    .footer-bottom .phone-link {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    /* ============ ANIMATIONS ============ */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .fade-up:nth-child(2) { transition-delay: 0.1s; }
+    .fade-up:nth-child(3) { transition-delay: 0.2s; }
+    .fade-up:nth-child(4) { transition-delay: 0.3s; }
+    .fade-up:nth-child(5) { transition-delay: 0.4s; }
+    .fade-up:nth-child(6) { transition-delay: 0.5s; }
+
+    /* ============ MOBILE MENU ============ */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(10,10,10,0.98);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 24px;
+      font-family: var(--font-serif);
+      color: var(--white);
+      letter-spacing: 2px;
+      transition: color 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+    .mobile-close {
+      position: absolute;
+      top: 24px; right: 32px;
+      font-size: 28px;
+      cursor: pointer;
+      color: var(--gold);
+      background: none;
+      border: none;
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (max-width: 1024px) {
+      .servicii-grid { grid-template-columns: repeat(2, 1fr); }
+      .pachete-grid { grid-template-columns: 1fr 1fr; }
+      .extra-grid { grid-template-columns: 1fr; }
+      .testimoniale-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-brand { grid-column: span 2; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 70px 20px; }
+      nav { padding: 16px 20px; }
+      nav.scrolled { padding: 12px 20px; }
+      .nav-links, .nav-cta { display: none; }
+      .hamburger { display: flex; }
+
+      .despre-grid { grid-template-columns: 1fr; gap: 48px; }
+      .despre-stats { bottom: -10px; right: -10px; padding: 20px 24px; }
+      .despre-stats .number { font-size: 36px; }
+
+      .servicii-grid { grid-template-columns: 1fr; }
+      .pachete-grid { grid-template-columns: 1fr; }
+      .pachete-tabs { flex-direction: column; align-items: stretch; }
+      .servicii-extra { padding: 32px 24px; }
+
+      .portofoliu-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px 200px;
+      }
+      .porto-item:first-child { grid-row: span 1; }
+      .porto-item:nth-child(4) { grid-column: span 1; }
+
+      .testimoniale-grid { grid-template-columns: 1fr; }
+
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-form { padding: 28px 20px; }
+      .form-row { grid-template-columns: 1fr; }
+
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-brand { grid-column: span 1; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; max-width: 320px; text-align: center; }
+      .scroll-indicator { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .portofoliu-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, 220px);
+      }
+      #galerie-ext { grid-template-columns: repeat(2,1fr) !important; }
+    }
+    @media (max-width: 768px) {
+      #galerie-ext { grid-template-columns: repeat(2,1fr) !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar">
+    <a href="#hero" class="nav-logo"><img src="img/logo-cris-media.jpg" alt="Cris Media Studio" />Cris <span>Media</span> Studio</a>
+    <ul class="nav-links">
+      <li><a href="#despre">Despre</a></li>
+      <li><a href="#servicii">Servicii</a></li>
+      <li><a href="#portofoliu">Portofoliu</a></li>
+      <li><a href="#testimoniale">Recenzii</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a href="tel:0740514961" class="nav-cta">0740 514 961</a>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="toggleMenu()">✕</button>
+    <a href="#despre" onclick="toggleMenu()">Despre Noi</a>
+    <a href="#servicii" onclick="toggleMenu()">Servicii</a>
+    <a href="#portofoliu" onclick="toggleMenu()">Portofoliu</a>
+    <a href="#testimoniale" onclick="toggleMenu()">Recenzii</a>
+    <a href="#contact" onclick="toggleMenu()">Contact</a>
+    <a href="tel:0740514961" style="color:var(--gold);font-size:18px;letter-spacing:3px;">0740 514 961</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero">
+    <div class="hero-video-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">Drobeta-Turnu Severin · România</div>
+      <h1 class="hero-title">
+        Nunta ta merită<br>un <em>film de cinema</em>
+      </h1>
+      <p class="hero-subtitle">Producții cinematice premium pentru evenimente elegante</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Verifică disponibilitatea datei</a>
+        <a href="#portofoliu" class="btn-secondary">Vezi portofoliul</a>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <a href="tel:0740514961">0740 514 961</a>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ===== DESPRE NOI ===== -->
+  <section id="despre">
+    <div class="container">
+      <div class="despre-grid">
+        <div class="despre-visual fade-up">
+          <div class="despre-image-frame">
+            <img src="img/echipa-cris-media.jpg" alt="Echipa Cris Media Studio" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          </div>
+          <div class="despre-stats">
+            <div class="number">500+</div>
+            <div class="label">Events filmarte</div>
+          </div>
+        </div>
+        <div class="despre-text fade-up">
+          <p class="section-label">Despre noi</p>
+          <h2 class="section-title">Mai mult decât o echipă foto-video. <span class="gold">O echipă care știe să spună povești.</span></h2>
+          <div class="gold-line"></div>
+          <p>✨ În spatele fiecărui eveniment memorabil se află oameni care știu să observe momentele înainte ca acestea să dispară. 🤍</p>
+          <p>Suntem o echipă formată din 2 fotografi 📸📸 și un videograf 🎥, uniți nu doar de pasiunea pentru imagine, ci și de o experiență construită de-a lungul anilor, atât în domeniul evenimentelor importante din viața oamenilor, cât și în domeniul televiziunii. 📺 Toți membrii echipei noastre lucrează în televiziune de ani de zile, un mediu dinamic în care fiecare secundă contează ⏱️, unde trebuie să fii mereu atent 👀, rapid ⚡ și pregătit să surprinzi momentul perfect.</p>
+          <p>Această experiență ne-a format ochiul pentru detalii 🔍, ne-a învățat să anticipăm momentele importante și să spunem povești prin imagini. 🎞️✨</p>
+          <p>La un eveniment nu există „încă o dată”. Primul dans 💃🕺. Emoția părinților 🥹. Lacrimile din timpul ceremoniei 🤍. Îmbrățișările celor dragi 🤗. Bucuria invitaților 🥂. Toate aceste momente se întâmplă o singură dată. ✨</p>
+          <p>De aceea, venim pregătiți ca o echipă completă, pentru ca nicio emoție importantă să nu rămână neobservată. Nu ne dorim doar să realizăm fotografii frumoase 📷 sau filmări spectaculoase 🎬. Ne dorim ca, peste ani ⏳, atunci când veți privi imaginile și filmările, să puteți retrăi exact emoția acelei zile. ❤️</p>
+          <p>Experiența din televiziune 📺 ne-a învățat să surprindem realitatea. Pasiunea pentru evenimente 💫 ne ajută să o transformăm în amintiri.</p>
+          <p>Pentru noi, fiecare eveniment este diferit. 💎 Fiecare poveste are propriile emoții ❤️, oameni 👥 și momente speciale ✨.</p>
+          <p>Iar misiunea noastră este simplă: Să fim acolo 🤝, să observăm ceea ce alții pot trece cu vederea 👀 și să păstrăm pentru totdeauna momentele care nu se mai întorc. 📸🎥</p>
+          <p class="despre-tagline">Profesionalism 🤝 &nbsp;•&nbsp; Experiență ⭐ &nbsp;•&nbsp; Emoție ❤️ &nbsp;•&nbsp; Amintiri autentice ✨</p>
+          <p class="despre-closing">Pentru că nu fotografiem doar un eveniment. Păstrăm o poveste pentru o viață întreagă. ❤️</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICII / PACHETE ===== -->
+  <section id="servicii">
+    <div class="container">
+      <div class="servicii-header">
+        <p class="section-label">Pachete Foto & Video</p>
+        <h2 class="section-title">Evenimente memorabile. <span class="gold">Amintiri pentru o viață.</span></h2>
+        <div class="gold-line"></div>
+        <p class="section-subtitle">Fiecare poveste merită să fie spusă într-un mod unic. Suntem o echipă formată din 3 profesioniști — 2 fotografi și 1 videograf — pregătiți să surprindem emoțiile, zâmbetele, lacrimile și toate momentele importante ale evenimentului vostru: nunți, botezuri, cununii, majorate, absolviri și evenimente private.</p>
+      </div>
+
+      <div class="pachete-tabs">
+        <button class="tab-btn active" data-tab="nunta" onclick="showPachet('nunta', this)">Nunți & Cununii</button>
+        <button class="tab-btn" data-tab="botez" onclick="showPachet('botez', this)">Botezuri</button>
+        <button class="tab-btn" data-tab="majorat" onclick="showPachet('majorat', this)">Majorate & Evenimente Private</button>
+      </div>
+
+      <!-- NUNTI -->
+      <div class="pachete-panel active" id="tab-nunta">
+        <div class="pachete-grid">
+          <div class="pachet-card fade-up">
+            <div class="pachet-tier">🥈 Silver — Pachetul Esențial</div>
+            <h3>de la <span style="color:var(--white);">5.500 LEI</span></h3>
+            <p class="pachet-desc">Pentru cei care își doresc o amintire completă și autentică a evenimentului. Ideal pentru evenimente restrânse sau pentru un pachet foto-video clasic și elegant.</p>
+            <ul class="pachet-features">
+              <li>📸 2 fotografi profesioniști</li>
+              <li>🎥 1 videograf profesionist</li>
+              <li>📷 Fotografii pe durata evenimentului</li>
+              <li>✨ Editare profesională a fotografiilor</li>
+              <li>🎬 Filmarea momentelor importante</li>
+              <li>🎞️ Montaj video profesional</li>
+              <li>❤️ Clip „Best Moments”</li>
+              <li>📤 Predarea materialelor în format digital</li>
+            </ul>
+            <a href="#contact" class="btn-secondary">Solicită ofertă</a>
+          </div>
+          <div class="pachet-card featured fade-up">
+            <div class="pachet-badge">⭐ Cel mai ales</div>
+            <div class="pachet-tier">🥇 Gold — Pachetul Recomandat</div>
+            <h3>de la <span style="color:var(--white);">7.000 LEI</span></h3>
+            <p class="pachet-desc">Mai multe momente surprinse. Mai multe perspective. Mai multe amintiri. Cu doi fotografi și un videograf, surprindem simultan emoțiile voastre, reacțiile invitaților și toate detaliile care fac evenimentul special.</p>
+            <ul class="pachet-features">
+              <li>📸 2 fotografi profesioniști</li>
+              <li>🎥 1 videograf profesionist</li>
+              <li>✨ Fotografii editate profesional</li>
+              <li>🎬 Filmare profesională a evenimentului</li>
+              <li>🎞️ Montaj video complet</li>
+              <li>❤️ Clip cinematic „Best Moments”</li>
+              <li>🚁 Filmare aeriană cu drona</li>
+              <li>📸 15 fotografii printate în noaptea evenimentului</li>
+              <li>✍️ Guest Book pentru mesaje și urări din partea invitaților</li>
+              <li>✨ Trash the Dress — mini ședință foto după nuntă cu mirii (3 ore, min. 80 fotografii)</li>
+              <li>📤 Predarea materialelor în format digital</li>
+            </ul>
+            <a href="#contact" class="btn-primary" style="width:100%;text-align:center;">Solicită ofertă</a>
+          </div>
+          <div class="pachet-card fade-up">
+            <div class="pachet-tier">👑 Platinum — Experiența Completă</div>
+            <h3>de la <span style="color:var(--white);">9.000 LEI</span></h3>
+            <p class="pachet-desc">Pentru cei care își doresc mai mult decât fotografii și filmări — o experiență completă pentru un eveniment memorabil.</p>
+            <ul class="pachet-features">
+              <li>📸 2 fotografi profesioniști</li>
+              <li>🎥 1 videograf profesionist</li>
+              <li>✨ Fotografii editate profesional</li>
+              <li>🎬 Filmare profesională completă</li>
+              <li>🎞️ Montaj video premium</li>
+              <li>❤️ Clip cinematic „Best Moments”</li>
+              <li>🚁 Filmare aeriană cu drona</li>
+              <li>🌫️ Mașină de fum greu pentru momente spectaculoase</li>
+              <li>📷 Cabină foto pentru invitați</li>
+              <li>📸 15 fotografii printate în noaptea evenimentului</li>
+              <li>✍️ Guest Book cu mesaje din partea invitaților</li>
+              <li>🎁 Cadou — Photobook Premium 30×30 cm, 20 file</li>
+              <li>✨ Trash the Dress — mini ședință foto după nuntă cu mirii (3 ore, min. 80 fotografii)</li>
+              <li>📤 Predarea materialelor în format digital</li>
+            </ul>
+            <a href="#contact" class="btn-secondary">Solicită ofertă</a>
+          </div>
+        </div>
+
+        <div class="servicii-extra fade-up">
+          <h3>Servicii <span class="gold">Extra</span></h3>
+          <p>Pentru a vă personaliza experiența, aceste servicii pot fi adăugate separat oricărui pachet:</p>
+          <div class="extra-grid">
+            <div class="extra-item"><span>🚁 Filmare cu drona</span><strong>de la 500 LEI</strong></div>
+            <div class="extra-item"><span>🌫️ Mașină de fum greu</span><strong>de la 600 LEI</strong></div>
+            <div class="extra-item"><span>📷 Cabină foto</span><strong>de la 800 LEI</strong></div>
+            <div class="extra-item"><span>📸 15 fotografii printate în noaptea evenimentului</span><strong>300 LEI</strong></div>
+            <div class="extra-item"><span>✍️ Guest Book personalizat</span><strong>250 LEI</strong></div>
+            <div class="extra-item"><span>📖 Photobook Premium 30×30 cm / 20 file</span><strong>500 LEI</strong></div>
+            <div class="extra-item"><span>✨ Trash the Dress / mini ședință foto (3 ore, min. 80 poze)</span><strong>700 LEI</strong></div>
+            <div class="extra-item"><span>📸 Fotograf suplimentar</span><strong>ofertă personalizată</strong></div>
+            <div class="extra-item"><span>🎥 Videograf suplimentar</span><strong>ofertă personalizată</strong></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTEZ -->
+      <div class="pachete-panel" id="tab-botez">
+        <div class="pachete-grid">
+          <div class="pachet-card fade-up">
+            <div class="pachet-tier">🥈 Silver</div>
+            <h3>de la <span style="color:var(--white);">2.000 LEI</span></h3>
+            <ul class="pachet-features">
+              <li>📸 Fotograf</li>
+              <li>🎥 Videograf</li>
+              <li>✨ Fotografii editate</li>
+              <li>🎬 Filmare eveniment</li>
+              <li>❤️ Clip Best Moments</li>
+            </ul>
+            <a href="#contact" class="btn-secondary">Solicită ofertă</a>
+          </div>
+          <div class="pachet-card featured fade-up">
+            <div class="pachet-badge">⭐ Recomandat</div>
+            <div class="pachet-tier">🥇 Gold</div>
+            <h3>de la <span style="color:var(--white);">3.000 LEI</span></h3>
+            <ul class="pachet-features">
+              <li>📸 2 fotografi</li>
+              <li>🎥 1 videograf</li>
+              <li>✨ Fotografii editate profesional</li>
+              <li>🎬 Filmare completă</li>
+              <li>❤️ Clip Best Moments</li>
+              <li>📸 Fotografii printate</li>
+              <li>✍️ Guest Book</li>
+            </ul>
+            <a href="#contact" class="btn-primary" style="width:100%;text-align:center;">Solicită ofertă</a>
+          </div>
+          <div class="pachet-card fade-up">
+            <div class="pachet-tier">👑 Platinum</div>
+            <h3>de la <span style="color:var(--white);">4.500 LEI</span></h3>
+            <ul class="pachet-features">
+              <li>📸 2 fotografi</li>
+              <li>🎥 1 videograf</li>
+              <li>✨ Editare profesională foto-video</li>
+              <li>🚁 Filmare cu drona*</li>
+              <li>📸 15 fotografii printate</li>
+              <li>✍️ Guest Book</li>
+              <li>🎁 Photobook 30×30 cm / 20 file</li>
+            </ul>
+            <a href="#contact" class="btn-secondary">Solicită ofertă</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAJORAT & EVENIMENTE PRIVATE -->
+      <div class="pachete-panel" id="tab-majorat">
+        <div class="pachete-grid" style="grid-template-columns:1fr;max-width:380px;margin:0 auto 32px;">
+          <div class="pachet-card fade-up">
+            <div class="pachet-tier">🥈 Silver</div>
+            <h3>de la <span style="color:var(--white);">1.500 LEI</span></h3>
+            <ul class="pachet-features">
+              <li>📸 Fotograf</li>
+              <li>✨ Fotografii editate profesional</li>
+              <li>📤 Predare digitală</li>
+            </ul>
+            <a href="#contact" class="btn-secondary">Solicită ofertă</a>
+          </div>
+        </div>
+        <p class="pachet-note">Pachetele Gold și Platinum pentru Majorate & Evenimente Private urmează să fie completate — sună-ne pentru o ofertă personalizată. ✨</p>
+      </div>
+
+      <!-- SERVICII ADITIONALE: LIVE + CORPORATE -->
+      <div style="margin-top:64px;">
+        <div class="servicii-header" style="margin-bottom:40px;">
+          <p class="section-label">Servicii Adiționale</p>
+          <h2 class="section-title">Transmisii Live & <span class="gold">Înregistrări Corporate</span></h2>
+          <div class="gold-line"></div>
+        </div>
+        <div class="servicii-grid" style="grid-template-columns:repeat(2,1fr);">
+          <div class="serviciu-card fade-up">
+            <span class="serviciu-icon">🔴</span>
+            <h3>Transmisii Live</h3>
+            <p>Conectăm evenimentul tău cu familia și prietenii de oriunde din lume — transmisiune live HD pe Facebook și YouTube pentru nunți, botezuri, cununii sau evenimente corporate. Venim cu conexiune 4G/5G de rezervă, imagine HD/4K, sunet profesional sincronizat și înregistrare salvată la final, ca amintire.</p>
+          </div>
+          <div class="serviciu-card fade-up">
+            <span class="serviciu-icon">🏢</span>
+            <h3>Filmări & Înregistrări Corporate</h3>
+            <p>Producții video corporate la standarde profesionale pentru conferințe, lansări de produs, team building și prezentări de companie. Imagine cinema, sunet clar, montaj rapid, livrare la termen — imaginea brandului tău, la standarde internaționale. Opțional, cu transmisiune live simultană.</p>
+          </div>
+        </div>
+        <div style="text-align:center;margin-top:36px;">
+          <a href="#contact" class="btn-secondary">Solicită ofertă Live / Corporate</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PORTOFOLIU ===== -->
+  <section id="portofoliu">
+    <div class="container">
+      <div class="portofoliu-header">
+        <p class="section-label">Lucrările noastre</p>
+        <h2 class="section-title">Portofoliu <span class="gold">Selectat</span></h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="pachete-tabs" style="margin-bottom:32px;">
+        <button class="tab-btn active" onclick="filterPortofoliu('toate', this)">Toate</button>
+        <button class="tab-btn" onclick="filterPortofoliu('nunti', this)">Nunți</button>
+        <button class="tab-btn" onclick="filterPortofoliu('cununii', this)">Cununii</button>
+        <button class="tab-btn" onclick="filterPortofoliu('botez', this)">Botezuri</button>
+        <button class="tab-btn" onclick="filterPortofoliu('majorat', this)">Majorate</button>
+      </div>
+
+      <div id="galerie-ext" style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px;"></div>
+
+      <!-- Video Highlight -->
+      <div class="video-highlight fade-up">
+        <h3>Highlight <span class="gold">Cinematic</span> 2024</h3>
+        <p>Câteva dintre cele mai frumoase momente capturate de echipa noastră</p>
+        <div class="video-placeholder" onclick="alert('Adaugă link-ul video YouTube/Vimeo aici')">
+          <div class="play-btn">▶</div>
+          <span class="video-label">Adaugă video-ul tău aici</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Portofoliu — poze reale, grupate pe categorii
+    const portofoliuFiles = {
+  "nunti": [
+    "36980958_2085695698215776_3839213047612702720_n.jpg",
+    "37027112_2085695574882455_5815067517541941248_n.jpg",
+    "469310022_9085735471545062_5199353975856388439_n.jpg",
+    "486286602_9722071774578092_3839190717375761188_n.jpg",
+    "486304557_9699361636849106_3680045470932898745_n.jpg",
+    "486311188_9722071417911461_8817869353954380079_n.jpg",
+    "486359124_9722071834578086_10695708403656026_n.jpg",
+    "486393742_9722071787911424_1361884747594948414_n.jpg",
+    "486445061_9699361630182440_5092358261324780800_n.jpg",
+    "486468211_9722071714578098_8917142099937375035_n.jpg",
+    "486571680_9722071387911464_7693337351272179122_n.jpg",
+    "486748239_9728507593934510_4922229347561235141_n.jpg",
+    "486787761_9723996687718934_1842637809102356036_n.jpg",
+    "486789989_9728507633934506_1180682919100287634_n.jpg",
+    "486821202_9742986239153312_1768314473858567297_n.jpg",
+    "486842971_9722071694578100_2304057649388258398_n.jpg",
+    "486899163_9722071364578133_6023462272321520621_n.jpg",
+    "486905389_9728507690601167_1000781997062866330_n.jpg",
+    "486963578_9728506843934585_2302162678892742269_n.jpg",
+    "486963790_9728507530601183_6051522114782943622_n.jpg",
+    "487030700_9736539069798029_3165250764617584930_n.jpg",
+    "487069334_9736538716464731_3697137116783621461_n.jpg",
+    "487084077_9736539119798024_1517593496374214169_n.jpg",
+    "487095106_9722071624578107_8860948711014063731_n.jpg",
+    "487107567_9722071381244798_8358692309698578977_n.jpg",
+    "487122348_9722071697911433_2024938306449669511_n.jpg",
+    "487136722_9722071801244756_103487124614442034_n.jpg",
+    "487148990_9722071451244791_5508553849895618100_n.jpg",
+    "487157986_9722071704578099_4543043551674192817_n.jpg",
+    "487171357_9736538863131383_222044165453255976_n.jpg",
+    "487200931_9736539009798035_1424167378973912137_n.jpg",
+    "487202256_9736539036464699_2908580520771124121_n.jpg",
+    "487203161_9736539143131355_5669237095707278001_n.jpg",
+    "487203517_9736539179798018_2493527429748752172_n.jpg",
+    "487203675_9736538873131382_3032596059453448186_n.jpg",
+    "487212817_9728507590601177_3128698504013311606_n.jpg",
+    "487214612_9723994744385795_1379398345202632013_n.jpg",
+    "487215388_9722071794578090_1814030222265361248_n.jpg",
+    "487221157_9723996654385604_4190486234304559165_n.jpg",
+    "487305634_9746627125455890_2555186577142369644_n.jpg",
+    "487307818_9742986429153293_9178243282005360119_n.jpg",
+    "487381730_9746626972122572_1311493607260565842_n.jpg",
+    "487401663_9723994741052462_6333751877939065495_n.jpg",
+    "487466908_9722071681244768_1853991297842540177_n.jpg",
+    "487477368_9742986262486643_188198545955819627_n.jpg",
+    "487496804_9746626975455905_2567037425324341555_n.jpg",
+    "487510180_9728507660601170_1816834883637062154_n.jpg",
+    "487517514_9746626958789240_7984847950755990986_n.jpg",
+    "487523519_9728507597267843_6648235902875474943_n.jpg",
+    "487529737_9728506730601263_507254176691309195_n.jpg",
+    "487546055_9746627085455894_8383118624450675080_n.jpg",
+    "487550206_9736538733131396_2873297102354443083_n.jpg",
+    "487551610_9746627318789204_6101999899906056465_n.jpg",
+    "487674362_9746627268789209_7285842659884882143_n.jpg",
+    "487675609_9736539033131366_2585097635044037162_n.jpg",
+    "487717573_9736538813131388_8913382545725344691_n.jpg",
+    "487736792_9746627355455867_6128152940634393983_n.jpg",
+    "487782402_9746627252122544_8518609617036831969_n.jpg",
+    "487806931_9736538969798039_5821376444376964517_n.jpg",
+    "487824105_9728507657267837_1817583564573581664_n.jpg",
+    "487827193_9746627408789195_4079077333866517545_n.jpg",
+    "487977824_9746627095455893_4451859151717699763_n.jpg",
+    "488464292_9746626955455907_3639912429298711258_n.jpg",
+    "67405099_2671590382959635_306576749863370752_n.jpg",
+    "69068163_2705572766228063_7588437309079420928_n.jpg",
+    "73238407_2851935171591821_1849423981493354496_n.jpg",
+    "74217838_2851919381593400_8576038388522549248_n.jpg",
+    "76717461_2851919074926764_2754329434201784320_n.jpg"
+  ],
+  "cununii": [
+    "487387251_9745025222282747_4938408555953022659_n.jpg",
+    "487483070_9745025202282749_1388326274075097616_n.jpg",
+    "487483070_9745025372282732_7865224535721742967_n.jpg",
+    "487505593_9745025478949388_2448459836671497568_n.jpg",
+    "487807369_9745025425616060_7247982502403425715_n.jpg",
+    "487829817_9745025215616081_4251468195264263232_n.jpg"
+  ],
+  "botez": [
+    "32261046_2007086259410054_5199903964530737152_n.jpg",
+    "32267474_2007086289410051_4926395056937500672_n.jpg",
+    "32484677_2007085449410135_97897470205362176_n.jpg",
+    "469241828_9085735408211735_537728714863125130_n.jpg",
+    "471179970_9188284791290129_7766140900477980257_n.jpg",
+    "471282055_9188285104623431_6376340499301116313_n.jpg",
+    "471316872_9213688818749726_8748630962434029587_n.jpg",
+    "471428630_9188284787956796_1446467437150535008_n.jpg",
+    "471459075_9213688925416382_5306400065990089648_n.jpg",
+    "471465111_9213688918749716_3199048055525577495_n.jpg",
+    "471566800_9213688848749723_7690132547582373172_n.jpg",
+    "471589047_9213688745416400_8234570593600275054_n.jpg",
+    "471677766_9213688748749733_4152299138340773525_n.jpg",
+    "481658674_9596922037093067_4742331969345295844_n.jpg",
+    "481894834_9596921997093071_3032404215270710603_n.jpg",
+    "481999681_9596922223759715_5387395186527598954_n.jpg",
+    "482066191_9596921990426405_8483966275424067647_n.jpg",
+    "487510183_9753699794748623_9064950659026662697_n.jpg",
+    "487559694_9753699974748605_5670058948204554066_n.jpg",
+    "487765021_9753700031415266_2892596586158491109_n.jpg",
+    "487824589_9753699918081944_1952385578859615917_n.jpg",
+    "488181568_9753699824748620_9089309645414153966_n.jpg",
+    "488242451_9753699771415292_1567083770964747333_n.jpg",
+    "59342896_2520564748062200_8790467173395988480_n.jpg",
+    "59392789_2522159527902722_899262900768604160_n.jpg",
+    "66636727_2637315196387154_2814085563299135488_n.jpg",
+    "66736107_2637314723053868_3425749581252526080_n.jpg",
+    "69210803_2718260488292624_2316018456752816128_n.jpg",
+    "69552421_2741790612606278_764553295933997056_n.jpg",
+    "69630846_2741791092606230_6353569524976975872_n.jpg",
+    "69689467_2718280724957267_5337109203062358016_n.jpg",
+    "69755644_2741629522622387_9075350558843338752_n.jpg",
+    "71119456_2781428621975810_9202340977870635008_n.jpg",
+    "72223824_2808640809254591_3758865857455849472_n.jpg",
+    "72466388_2810785259040146_6734371349894004736_n.jpg",
+    "72961612_2810784819040190_4543498378901716992_n.jpg"
+  ],
+  "majorat": [
+    "473653692_9320064688112138_5021599921071246604_n.jpg",
+    "486638285_9716933565091913_3300318652584050353_n.jpg",
+    "486641857_9716933365091933_4818952206610396761_n.jpg",
+    "486851101_9716933315091938_25410126332672288_n.jpg"
+  ]
+};
+    const portofoliuLabels = { nunti: 'Nuntă', cununii: 'Cununie', botez: 'Botez', majorat: 'Majorat' };
+    const portofoliuItems = [];
+    Object.entries(portofoliuFiles).forEach(([cat, list]) => {
+      list.forEach(f => portofoliuItems.push({ src: 'img/portofoliu/' + cat + '/' + f, cat }));
+    });
+
+    function renderPortofoliu() {
+      const grid = document.getElementById('galerie-ext');
+      grid.innerHTML = portofoliuItems.map(item => `
+        <div class="porto-item" data-cat="${item.cat}" style="height:220px;">
+          <img class="porto-bg" src="${item.src}" alt="Cris Media Studio - ${portofoliuLabels[item.cat]}" loading="lazy" />
+          <div class="porto-overlay"><span>${portofoliuLabels[item.cat]}</span></div>
+        </div>
+      `).join('');
+    }
+    renderPortofoliu();
+
+    function filterPortofoliu(cat, btn) {
+      document.querySelectorAll('#portofoliu .tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('#galerie-ext .porto-item').forEach(item => {
+        item.style.display = (cat === 'toate' || item.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+  </script>
+
+  <!-- ===== TESTIMONIALE ===== -->
+  <section id="testimoniale">
+    <div class="container">
+      <div class="testimoniale-header">
+        <p class="section-label">Ce spun clienții</p>
+        <h2 class="section-title">Povești <span class="gold">Reale</span></h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="testimoniale-grid">
+        <div class="testimonial-card fade-up">
+          <div class="stars">★★★★★</div>
+          <p>"Nu am cuvinte să descriu ce a făcut Cris Media Studio pentru nunta noastră. Am privit filmul de zece ori în prima săptămână și de fiecare dată am plâns de emoție. Fiecare privire, fiecare îmbrățișare, captată perfect. Este filmul vieții noastre."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <h4>Andreea & Mihai Popescu</h4>
+              <span>Nuntă · Septembrie 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="stars">★★★★★</div>
+          <p>"Profesionalism desăvârșit de la primul contact până la predarea materialelor. Echipa a știut să fie discretă și prezentă în același timp — un talent rar. Fotografiile au ieșit ca dintr-un film. Recomand cu toată inima oricui vrea calitate adevărată."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">E</div>
+            <div class="author-info">
+              <h4>Elena & Cristian Ionescu</h4>
+              <span>Nuntă · Iulie 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="stars">★★★★★</div>
+          <p>"Mașina de fum greu la intrarea mirilor a creat un efect de basm pe care invitații nu îl vor uita vreodată. Filmul are o calitate cinematică uimitoare. Dacă vrei să transformi nunta ta într-un eveniment memorabil, Cris Media Studio este singura alegere."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">M</div>
+            <div class="author-info">
+              <h4>Maria & George Dumitrescu</h4>
+              <span>Nuntă · Mai 2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="stars">★★★★★</div>
+          <p>"Botezul fetiței noastre a fost documentat impecabil, de la sosirea nașilor până la ultimul dans. Echipa a fost discretă, dar nu a scăpat niciun moment important — iar clipul Best Moments ne-a făcut să plângem de fericire când l-am revăzut."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">I</div>
+            <div class="author-info">
+              <h4>Ioana & Alexandru Marinescu</h4>
+              <span>Botez · Aprilie 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="stars">★★★★★</div>
+          <p>"Am ales Cris Media Studio pentru majoratul fiicei noastre și a fost cea mai bună decizie. Fotografiile sunt superbe, iar filmul surprinde exact energia petrecerii — toți invitații au întrebat cine a filmat. Recomand cu toată încrederea!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">F</div>
+            <div class="author-info">
+              <h4>Familia Stancu</h4>
+              <span>Majorat · Iunie 2025</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="stars">★★★★★</div>
+          <p>"Am transmis conferința anuală a companiei live pe Facebook cu Cris Media Studio — imagine HD, sunet perfect sincronizat, zero probleme tehnice. Colegii din alte orașe au putut urmări totul în timp real. Profesionalism desăvârșit din partea întregii echipe."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">A</div>
+            <div class="author-info">
+              <h4>Andrei Popa, Director Marketing</h4>
+              <span>Eveniment Corporate · Mai 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info fade-up">
+          <p class="section-label">Contactează-ne</p>
+          <h2>Hai să creăm <span class="gold">împreună</span> filmul nunții tale</h2>
+          <div class="gold-line"></div>
+          <p>Scrie-ne sau sună-ne acum pentru a verifica disponibilitatea datei tale. Colaborarea noastră începe cu o discuție relaxată despre viziunea ta.</p>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📞</div>
+            <div class="contact-detail-text">
+              <h4>Telefon</h4>
+              <a href="tel:0740514961">0740 514 961</a> ·
+              <a href="tel:0765701552">0765 701 552</a> ·
+              <a href="tel:0771612199">0771 612 199</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📍</div>
+            <div class="contact-detail-text">
+              <h4>Locație</h4>
+              <p>Drobeta-Turnu Severin, Mehedinți, România</p>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-detail-icon">📸</div>
+            <div class="contact-detail-text">
+              <h4>Social Media</h4>
+              <a href="#">@CrisMediaStudio</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form fade-up">
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nume complet *</label>
+                <input type="text" placeholder="Andreea & Mihai" required />
+              </div>
+              <div class="form-group">
+                <label>Telefon *</label>
+                <input type="tel" placeholder="07XX XXX XXX" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Data evenimentului *</label>
+                <input type="date" required />
+              </div>
+              <div class="form-group">
+                <label>Locație eveniment</label>
+                <input type="text" placeholder="Sala, Oraș" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Tip eveniment</label>
+              <select style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);color:var(--white);padding:14px 16px;width:100%;font-family:var(--font-sans);font-size:14px;outline:none;-webkit-appearance:none;">
+                <option value="" style="background:#111;">Selectează tipul evenimentului</option>
+                <option value="nunta" style="background:#111;">Nuntă</option>
+                <option value="botez" style="background:#111;">Botez</option>
+                <option value="majorat" style="background:#111;">Majorat</option>
+                <option value="corporate" style="background:#111;">Eveniment Corporate</option>
+                <option value="alt" style="background:#111;">Alt eveniment</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Mesaj</label>
+              <textarea placeholder="Spune-ne mai multe despre evenimentul tău și despre ce îți dorești..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">Programează o discuție</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="nav-logo"><img src="img/logo-cris-media.jpg" alt="Cris Media Studio" />Cris <span>Media</span> Studio</span>
+        <p>Producții cinematice premium pentru cele mai importante momente ale vieții tale. Drobeta-Turnu Severin, România.</p>
+        <div class="social-links">
+          <a href="#" class="social-link" title="Facebook">f</a>
+          <a href="#" class="social-link" title="Instagram">in</a>
+          <a href="#" class="social-link" title="YouTube">▶</a>
+          <a href="#" class="social-link" title="TikTok">tt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Navigare</h4>
+        <ul>
+          <li><a href="#despre">Despre Noi</a></li>
+          <li><a href="#servicii">Servicii</a></li>
+          <li><a href="#portofoliu">Portofoliu</a></li>
+          <li><a href="#testimoniale">Recenzii</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Servicii</h4>
+        <ul>
+          <li><a href="#servicii">Nunți & Cununii</a></li>
+          <li><a href="#servicii">Botezuri</a></li>
+          <li><a href="#servicii">Majorate & Evenimente Private</a></li>
+          <li><a href="#servicii">Transmisii Live</a></li>
+          <li><a href="#servicii">Filmări Corporate</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Cris Media Studio · Drobeta-Turnu Severin · Toate drepturile rezervate</p>
+      <a href="tel:0740514961" class="phone-link">0740 514 961</a>
+    </div>
+  </footer>
+
+  <!-- ===== JS ===== -->
+  <script>
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Pachete tabs (servicii)
+    function showPachet(tab, btn) {
+      document.querySelectorAll('#servicii .tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.pachete-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('tab-' + tab).classList.add('active');
+    }
+
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+      document.body.style.overflow =
+        document.getElementById('mobileMenu').classList.contains('open') ? 'hidden' : '';
+    }
+
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Form submit
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      btn.textContent = '✓ Mesaj trimis! Te contactăm în curând.';
+      btn.style.background = '#2d5a27';
+      btn.style.color = '#fff';
+      setTimeout(() => {
+        btn.textContent = 'Programează o discuție';
+        btn.style.background = '';
+        btn.style.color = '';
+        e.target.reset();
+      }, 4000);
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
